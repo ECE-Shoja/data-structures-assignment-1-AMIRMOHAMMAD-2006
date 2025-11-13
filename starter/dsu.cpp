@@ -17,7 +17,9 @@ void unionSet(int a, int b) {
     b = findSet(b);
     if (a != b) {
         if (sz[a] < sz[b]){
-            swap(a, b);
+            int temp = a;
+            a = b;
+            b = temp;
         }
         parent[b] = a;
         sz[a] += sz[b];
